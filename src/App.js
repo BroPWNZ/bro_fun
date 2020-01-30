@@ -1,5 +1,5 @@
 import React from 'react';
-import { View } from '@vkontakte/vkui';
+import { View, Panel, Div } from '@vkontakte/vkui';
 import '@vkontakte/vkui/dist/vkui.css';
 
 import connect from '@vkontakte/vkui-connect-promise';
@@ -26,11 +26,13 @@ class App extends React.Component {
 	
     render() {
         return (
-            <View activePanel={this.state.activePanel}>
-					
-					<Home id="home" fetchedUser={this.state.fetchedUser} go={this.go} />
-					<Info id="info" go={this.go} />
-			</View>
+            <View>
+		<Panel>
+			<Div>
+			Ты пидор
+			</Div>
+		</Panel>
+	    </View>
         )
     }
 }
